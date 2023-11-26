@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../cs50-project/style.css">
-    <script src="../cs50-project/app.js" defer></script>
-    <title>Sketch it!</title>
+    <link rel="stylesheet" href="../cs50-finalproject/style.css">
+    <script src="https://kit.fontawesome.com/6aff11957b.js" crossorigin="anonymous"></script>
+    <script src="../cs50-finalproject/app.js" defer></script>
+    <title>Sketch it</title>
 </head>
 <body>
 
-    <h2>Sketch it!</h2>
-<p>What do you want to practice today?</p>
+    <h2>Sketch it</h2>
+<span id="sub">What do you want to practice today?</span>
 
 <div class="tab">
   <button class="tablinks" onclick="openSubj(event, 'people')">People</button>
@@ -18,187 +19,263 @@
   <button class="tablinks" onclick="openSubj(event, 'animals')">Animals</button>
   <button class="tablinks" onclick="openSubj(event, 'nature')">Nature</button>
   <button class="tablinks" onclick="openSubj(event, 'buildings')">Buildings</button>
+  <button class="tablinks" onclick="openSubj(event, 'others')">Others</button>
 </div>
-
 <div id="people" class="tabcontent">
-  <h3>People</h3>
-  <p>
-    <select name="people" id="people">
-        <option disabled selected value> -- select an option -- </option>
-        <option value="all-portraits">Portrait</option>
-        <option value="f-portraits">Female Portrait</option>
-        <option value="m-portraits">Male Portrait</option>
-        <option value="all-fullbody">Full body</option>
-        <option value="f-fullbody">Female full body</option>
-        <option value="m-fullbody">Male full body</option>
-        <option value="clothes">Clothes</option>
-    </select>
-  </p>
+  <form class="container">
+    <p>
+      <div class="custom-select">
+        <select name="people" id="peopleSelect">
+            <option disabled selected value> People </option>
+            <option value="model">All</option>
+            <option value="portrait photography">Portrait</option>
+            <option value="portrait photography female">Female Portrait</option>
+            <option value="portrait photography male">Male Portrait</option>
+            <option value="face expression">Face Expressions</option> 
+            <option value="pose">Poses</option>        
+        </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
+    </p>
 
-  <h3>Timer</h3>
-  <p>
-    <select name="timer" id="timer">
-        <option disabled selected value> -- select an option -- </option>
-        <option value="5">5 minutes</option>
-        <option value="10">10 minutes</option>
-        <option value="15">15 minutes</option>
-        <option value="20">20 minutes</option>
-        <option value="25">25 minutes</option>
-        <option value="30">30 minutes</option>
-        <option value="60">60 minutes</option>
-        <option value="no-timer">No timer</option>
-        
-      </select>
+    <p>
+      <div class="custom-select">
+        <select name="timer" id="timerPeople">
+          <option value="no-timer">No timer</option>
+          <option value="1">1 minute</option>
+          <option value="5">5 minutes</option>
+          <option value="10">10 minutes</option>
+          <option value="15">15 minutes</option>
+          <option value="20">20 minutes</option>
+          <option value="25">25 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="60">60 minutes</option>        
+        </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
+    </p>
 
-      <p><button type="submit">START!</button></p>
-  </p>
-
+    <p><button class="submit">START</button></p>
+  </form>
 </div>
-
 
 <div id="body-parts" class="tabcontent">
 
-  <h3>Body parts</h3>
-  <p>
-    <select name="body-parts" id="body-parts">
-        <option disabled selected value> -- select an option -- </option>
-        <option value="eyes">Eyes</option>
-        <option value="mouth">Mouth</option>
-        <option value="nose">Nose</option>
-        <option value="arms">Arms</option>
-        <option value="legs">Legs</option>
-        <option value="hands">Hands</option>
-        <option value="feet">Feet</option>
-        <option value="hair">Hair</option>
-        <option value="anatomy">Anatomy</option>
-        
-      </select>
-  </p>
+  <form class="container">
+    <p>
+      <div class="custom-select">
+        <select name="body-parts" id="body-partsSelect">
+            <option disabled selected value> Body parts </option>
+            <option value="human eyes">Eyes</option>
+            <option value="human mouth">Mouth</option>
+            <option value="human nose">Nose</option>
+            <option value="hands">Hands</option>
+            <option value="feet">Feet</option>
+            <option value="human ears">Ears</option>              
+        </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
+    </p>
 
-  <h3>Timer</h3>
-  <p>
-    <select name="timer" id="timer">
-        <option disabled selected value> -- select an option -- </option>
-        <option value="5">5 minutes</option>
-        <option value="10">10 minutes</option>
-        <option value="15">15 minutes</option>
-        <option value="20">20 minutes</option>
-        <option value="25">25 minutes</option>
-        <option value="30">30 minutes</option>
-        <option value="60">60 minutes</option>
-        <option value="no-timer">No timer</option>
-        
-      </select>
+    <p>
+      <div class="custom-select">
+        <select name="timer" id="timerBody">
+          <option value="no-timer">No timer</option>
+          <option value="1">1 minute</option>
+          <option value="5">5 minutes</option>
+          <option value="10">10 minutes</option>
+          <option value="15">15 minutes</option>
+          <option value="20">20 minutes</option>
+          <option value="25">25 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="60">60 minutes</option>       
+        </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
+    </p>
 
-      <p><button type="submit">START!</button></p>
-  </p>
+    <p><button class="submit">START</button></p>
+  </form>
 
 </div>
 
 <div id="animals" class="tabcontent">
-
-    <h3>Animals</h3>
+  <form class="container">
     <p>
-        <select name="animals" id="animals">
-            <option disabled selected value> -- select an option -- </option>
-            <option value="mammals">Mammals</option>
-            <option value="birds">Birds</option>
-            <option value="fish">Fish</option>
-            <option value="reptiles">Reptiles</option>
-            <option value="amphibians">Amphibians</option>
-            <option value="insects">Insects</option>
+      <div class="custom-select">
+        <select name="animals" id="animalsSelect">
+          <option disabled selected value>Animals</option>
+          <option value="animals">All</option>
+          <option value="mammals">Mammals</option>
+          <option value="birds">Birds</option>
+          <option value="fish">Fish</option>
+          <option value="reptiles">Reptiles</option>
+          <option value="amphibians">Amphibians</option>
+          <option value="insects">Insects</option>            
         </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
     </p>
 
-    <h3>Timer</h3>
     <p>
-      <select name="timer" id="timer">
-          <option disabled selected value> -- select an option -- </option>
+      <div class="custom-select">
+        <select name="timer" id="timerAnimals">
+          <option value="no-timer">No timer</option>
+          <option value="1">1 minute</option>
           <option value="5">5 minutes</option>
           <option value="10">10 minutes</option>
           <option value="15">15 minutes</option>
           <option value="20">20 minutes</option>
           <option value="25">25 minutes</option>
           <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>
-          <option value="no-timer">No timer</option>
-          
+          <option value="60">60 minutes</option>       
         </select>
-
-        <p><button type="submit">START!</button></p>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
     </p>
-     
+
+    <p><button class="submit">START</button></p>
+  </form>     
 </div>
 
 <div id="buildings" class="tabcontent">
 
-    <h3>Buildings</h3>
+  <form class="container">
     <p>
-        <select name="buildings" id="buildings">
-            <option disabled selected value> -- select an option -- </option>
-            <option value="houses">Houses</option>
+      <div class="custom-select">
+        <select name="buildings" id="buildingsSelect">
+          <option disabled selected value>Buildings</option>
+            <option value="house">Houses</option>
             <option value="architecture">Architecture</option>
-            <option value="sculptures">Sculptures</option>
-            <option value="streets">Streets</option>
-            <option value="store-fronts">Store fronts</option>
+            <option value="sculpture">Sculptures</option>
+            <option value="street photography">Streets</option>            
         </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
     </p>
 
-    <h3>Timer</h3>
     <p>
-      <select name="timer" id="timer">
-          <option disabled selected value> -- select an option -- </option>
+      <div class="custom-select">
+        <select name="timer" id="timerBuildings">
+          <option value="no-timer">No timer</option>
+          <option value="1">1 minute</option>
           <option value="5">5 minutes</option>
           <option value="10">10 minutes</option>
           <option value="15">15 minutes</option>
           <option value="20">20 minutes</option>
           <option value="25">25 minutes</option>
           <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>
-          <option value="no-timer">No timer</option>
-          
+          <option value="60">60 minutes</option>       
         </select>
-
-        <p><button type="submit">START!</button></p>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
     </p>
 
+    <p><button class="submit">START</button></p>
+  </form> 
 </div>
 
 <div id="nature" class="tabcontent">
-    <h3>Nature</h3>
+
+  <form class="container">
     <p>
-        <select name="nature" id="nature">
-            <option disabled selected value> -- select an option -- </option>
-            <option value="landscapes">Landscapes</option>
-            <option value="plants">Plants</option>
-            <option value="trees">Trees</option>
-            <option value="fruits">Fruits</option>
-            <option value="flowers">Flowers</option>
+      <div class="custom-select">
+        <select name="nature" id="natureSelect">
+          <option disabled selected value>Nature</option>
+            <option value="nature">All</option>
+            <option value="landscape">Landscapes</option>
+            <option value="plant">Plants</option>
+            <option value="tree">Trees</option>
+            <option value="fruit">Fruits</option>
+            <option value="flower">Flowers</option>
             <option value="sea">Sea</option>
-            <option value="mountains">Mountains</option>
-            <option value="still life">Still life</option>
+            <option value="mountain">Mountains</option>
         </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
     </p>
 
-    <h3>Timer</h3>
     <p>
-      <select name="timer" id="timer">
-          <option disabled selected value> -- select an option -- </option>
+      <div class="custom-select">
+        <select name="timer" id="timerNature">
+          <option value="no-timer">No timer</option>
+          <option value="1">1 minute</option>
           <option value="5">5 minutes</option>
           <option value="10">10 minutes</option>
           <option value="15">15 minutes</option>
           <option value="20">20 minutes</option>
           <option value="25">25 minutes</option>
           <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>
-          <option value="no-timer">No timer</option>
-          
+          <option value="60">60 minutes</option>       
         </select>
-
-        <p><button type="submit">START!</button></p>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
     </p>
 
+    <p><button class="submit">START</button></p>
+  </form> 
+
 </div>
+
+<div id="others" class="tabcontent">
+  <form class="container">
+    <p>
+      <div class="custom-select">
+        <select name="others" id="othersSelect">
+            <option disabled selected value> Others </option>
+            <option value="still life">Still Life</option>
+            <option value="food">Food</option>       
+        </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
+    </p>
+
+    <p>
+      <div class="custom-select">
+        <select name="timer" id="timerOthers">
+          <option value="no-timer">No timer</option>
+          <option value="1">1 minute</option>
+          <option value="5">5 minutes</option>
+          <option value="10">10 minutes</option>
+          <option value="15">15 minutes</option>
+          <option value="20">20 minutes</option>
+          <option value="25">25 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="60">60 minutes</option>        
+        </select>
+        <span class="custom-icon">
+          <i class="fa-solid fa-chevron-down" id="icon"></i>
+        </span>
+      </div>
+    </p>
+
+    <p><button class="submit">START</button></p>
+  </form>
+</div>
+
+
 
 </body>
 </html>
