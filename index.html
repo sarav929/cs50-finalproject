@@ -13,6 +13,7 @@
     <h2>Sketch it</h2>
 <span id="sub">What do you want to practice today?</span>
 
+
 <div class="tab">
   <button class="tablinks" onclick="openSubj(event, 'people')">People</button>
   <button class="tablinks" onclick="openSubj(event, 'body-parts')">Body parts</button>
@@ -22,10 +23,10 @@
   <button class="tablinks" onclick="openSubj(event, 'others')">Others</button>
 </div>
 <div id="people" class="tabcontent">
-  <form class="container">
+  <form class="container" method="post" action="../cs50-finalproject/session.html">
     <p>
       <div class="custom-select">
-        <select name="people" id="peopleSelect">
+        <select name="people" id="peopleSelect" required>
             <option disabled selected value> People </option>
             <option value="model">All</option>
             <option value="portrait photography">Portrait</option>
@@ -65,10 +66,10 @@
 
 <div id="body-parts" class="tabcontent">
 
-  <form class="container">
+  <form class="container" method="post" action="../cs50-finalproject/session.html">
     <p>
       <div class="custom-select">
-        <select name="body-parts" id="body-partsSelect">
+        <select name="body-parts" id="body-partsSelect" required>
             <option disabled selected value> Body parts </option>
             <option value="human eyes">Eyes</option>
             <option value="human mouth">Mouth</option>
@@ -108,10 +109,10 @@
 </div>
 
 <div id="animals" class="tabcontent">
-  <form class="container">
+  <form class="container" method="post" action="../cs50-finalproject/session.html">
     <p>
       <div class="custom-select">
-        <select name="animals" id="animalsSelect">
+        <select name="animals" id="animalsSelect" required>
           <option disabled selected value>Animals</option>
           <option value="animals">All</option>
           <option value="mammals">Mammals</option>
@@ -152,10 +153,10 @@
 
 <div id="buildings" class="tabcontent">
 
-  <form class="container">
+  <form class="container" method="post" action="../cs50-finalproject/session.html">
     <p>
       <div class="custom-select">
-        <select name="buildings" id="buildingsSelect">
+        <select name="buildings" id="buildingsSelect" required>
           <option disabled selected value>Buildings</option>
             <option value="house">Houses</option>
             <option value="architecture">Architecture</option>
@@ -193,10 +194,10 @@
 
 <div id="nature" class="tabcontent">
 
-  <form class="container">
+  <form class="container" method="post" action="../cs50-finalproject/session.html">
     <p>
       <div class="custom-select">
-        <select name="nature" id="natureSelect">
+        <select name="nature" id="natureSelect" required>
           <option disabled selected value>Nature</option>
             <option value="nature">All</option>
             <option value="landscape">Landscapes</option>
@@ -238,10 +239,10 @@
 </div>
 
 <div id="others" class="tabcontent">
-  <form class="container">
+  <form class="container" method="post" action="../cs50-finalproject/session.html">
     <p>
       <div class="custom-select">
-        <select name="others" id="othersSelect">
+        <select name="others" id="othersSelect" required>
             <option disabled selected value> Others </option>
             <option value="still life">Still Life</option>
             <option value="food">Food</option>       

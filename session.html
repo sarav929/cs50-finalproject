@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../cs50-finalproject/style.css">
     <script src="https://kit.fontawesome.com/6aff11957b.js" crossorigin="anonymous"></script>
-    
+    <script src="../cs50-finalproject/app-session.js" defer></script>
     <title>Sketch it - session</title>
 </head>
 <body>
 
     <div class="session-container">
 
-        <div class="session-timer">
-            <h1>0:00</h1>
+        <div id="timerElement">            
         </div>
 
         <div class="session-commands">
@@ -23,14 +22,14 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-            <div class="player-btns">
-                <i class="fa-solid fa-backward" style="color: #000000;"></i>
+            <div id="player-btns">
+                <i class="fa-solid fa-backward" id="back" style="color: #000000;"></i>
 
-                <i class="fa-solid fa-circle-pause" style="color: #000000;"></i>
+                <i class="fa-solid fa-circle-pause" id="pause" style="color: #000000;"></i>
 
-                <i class="fa-solid fa-circle-play" style="color: #000000;"></i>
+                <i class="fa-solid fa-circle-play" id="play" style="color: #000000;"></i>
 
-                <i class="fa-solid fa-forward" style="color: #000000;"></i>
+                <i class="fa-solid fa-forward" id="forward" style="color: #000000;"></i>
             </div>
         </div>
 

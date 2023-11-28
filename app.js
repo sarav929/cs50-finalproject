@@ -45,15 +45,13 @@ const forms = document.querySelectorAll('form.container')
 // function on submit //
 for (var i = 0, len = forms.length; i < len; i++) {
   forms[i].addEventListener('submit', () => {
-    if (practiceSubj == undefined) {
-      alert('Select a practice subject from the drop down to start!')
-    }
     displayValues(practiceSubj, timerImg)
     
     localStorage.setItem('practiceSubj', practiceSubj)
     localStorage.setItem('timerImg', timerImg)
-  });
-}
+    
+  })};
+
 
 let getSubjValue = function(a) {
   a.addEventListener('change', function() {
