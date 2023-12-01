@@ -12,8 +12,7 @@
 
     <div class="session-container">
 
-        <div id="timerElement">            
-        </div>
+        <div id="timer-container"><h1 id="timerElement"></h1></div>
 
         <div class="session-commands">
             <div class="bw-btn">
@@ -22,19 +21,20 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-            <div id="player-btns">
-                <i class="fa-solid fa-backward" id="back" style="color: #000000;"></i>
+            <div class="player-btns">
 
-                <i class="fa-solid fa-circle-pause" id="pause" style="color: #000000;"></i>
+                <i class="fa-solid fa-circle-pause" id="pause"></i>
 
-                <i class="fa-solid fa-circle-play" id="play" style="color: #000000;"></i>
+                <i class="fa-solid fa-circle-play" id="play"></i>
 
-                <i class="fa-solid fa-forward" id="forward" style="color: #000000;"></i>
+                <i class="fa-solid fa-arrows-rotate" id="refresh"></i>
             </div>
         </div>
 
-        <div class="img-container">
-            <img src="https://www.artistsandillustrators.co.uk/uploads/tinymce/images/still-life-lucy-mckie-final-painting.jpg">
+        <div id="img-container">
+            <img src="" alt="" class="reference" id="reference">
+            <p id="credits">pic by <a href="" id="author"></a> on <a href="https://unsplash.com/">unsplash.com</a></p>
+
         </div>
 
         <div class="bw-btn">

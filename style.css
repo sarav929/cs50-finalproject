@@ -231,6 +231,15 @@ input:checked + .slider:before {
   gap: 20px;
 }
 
+.player-btns i:hover {
+  color: rgb(116, 116, 116);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer
+}
+
 
 
 
