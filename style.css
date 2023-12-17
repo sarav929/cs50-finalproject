@@ -268,35 +268,3 @@ a {
   color: black;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-/*.custom-icon::before,
-.custom-icon::after {
-  --size: .4em;
-  content: ;
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 40%;
-  top: 50%;
-  transform: translate(-50);
-}
-
-.custom-icon::before {
-  border-left: var(--size) solid transparent;
-  border-right: var(--size) solid transparent;
-  border-bottom: var(--size) solid rgba(255, 255, 255, .5);
-  top: 35%;
-}
-
-.custom-icon::after {
-  border-left: var(--size) solid transparent;
-  border-right: var(--size) solid transparent;
-  border-top: var(--size) solid rgba(255, 255, 255, .5);
-  top: 55%;
-}*/

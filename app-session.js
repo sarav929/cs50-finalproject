@@ -1,8 +1,7 @@
-// get values from local storage //
 let practiceSubj = localStorage.getItem('practiceSubj')
 let timerImg = localStorage.getItem('timerImg')
 
-// variables //
+
 const startingMinutes = timerImg
 let time = startingMinutes * 60
 const accessKey = '_p4i1Ni1J4tA6CfGQ_2dyltRJCrsSHbK8Xhz3a6PSnc'
@@ -11,13 +10,9 @@ let isPaused = false
 let isBW = false
 const url = `https://api.unsplash.com/photos/random/?query=${keyword}&client_id=${accessKey}`
 
-// credits // 
-
 const credits = document.getElementById('author')
 let creatorName
 let creatorLink
-
-// html elements //
 
 const timerElement = document.getElementById('timerElement')
 const pause = document.getElementById('pause')
@@ -27,8 +22,6 @@ const back = document.getElementById('back')
 const imgContainer = document.getElementById('img-container')
 const referenceImg = document.getElementById('reference')
 const bwSwitch = document.getElementById('bw-switch')
-
-// PLAYER //
 
 back.addEventListener('click', (e) =>{
     localStorage.clear()
@@ -58,7 +51,6 @@ bwSwitch.addEventListener('change', (e) =>{
 })
 
 
-// TIMER //
 function startTimer() {
     setInterval(startTimer, 1000)
 
@@ -87,8 +79,6 @@ function startTimer() {
     }
 }
 
-// CREATE REFERENCE //
-
 function generateImg() {
     fetch(url) 
     .then(function (response) {
@@ -106,8 +96,6 @@ function generateImg() {
 
     })
 }
-
-/// SESSION ///
 
 startTimer()
 generateImg()
