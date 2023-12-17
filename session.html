@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../cs50-finalproject/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://kit.fontawesome.com/6aff11957b.js" crossorigin="anonymous"></script>
     <script src="../cs50-finalproject/app-session.js" defer></script>
     <title>Sketch it - session</title>
 </head>
 <body>
 
-    <div class="session-container">
+    <div class="session-container w3-container city w3-animate-opacity">
 
-        <div id="timer-container"><h1 id="timerElement"></h1></div>
+        
 
         <div class="session-commands">
-            <div class="bw-btn">
+
+            <div class="player-btns">
+                <i class="fa-solid fa-circle-arrow-left" id="back"></i>
+                
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="bw-switch">
                     <span class="slider round"></span>
                 </label>
             </div>
+
             <div class="player-btns">
+
+                <div id="timer-container"><label id="timerElement"></label></div>
 
                 <i class="fa-solid fa-circle-pause" id="pause"></i>
 
@@ -32,13 +39,8 @@
         </div>
 
         <div id="img-container">
-            <img src="" alt="" class="reference" id="reference">
-            <p id="credits">pic by <a href="" id="author"></a> on <a href="https://unsplash.com/">unsplash.com</a></p>
-
-        </div>
-
-        <div class="bw-btn">
-            
+            <img src="" alt="" id="reference" class="w3-container city w3-animate-opacity"></a>
+            <p id="credits" class="w3-container city w3-animate-opacity">pic by <a href="" id="author"></a> on <a href="https://unsplash.com/">unsplash.com</a></p>
         </div>
 
     </div>

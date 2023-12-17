@@ -4,17 +4,23 @@
 
 body {
   margin: auto;
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;*/
   display: grid;
   place-items: center;
+  background-color: #f7f7f7;
 }
 
-h2 {
-  margin-bottom: 0px;
-  margin-top: 50px;
+footer {
+  opacity: 0.6;
+  margin: 30px;
+}
+
+#logo {
+  text-align: center;
+  margin: 20px
+}
+
+#logo img {
+  width: 80%;
 }
 
 #sub {
@@ -22,17 +28,25 @@ h2 {
   margin-bottom: 50px;
 }
 
+.wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
 /* Style the tab */
 .tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
+  overflow: hidden; 
   background-color: #f1f1f1;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content:space-around;
   padding: 10px;
-  width: 80%;
+  width: 100%;
   height: 100%;
 }
 
@@ -46,6 +60,7 @@ h2 {
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  text-transform: uppercase;
 }
 
 /* Change background color of buttons on hover */
@@ -61,12 +76,8 @@ h2 {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-  width: 80%;
-  height: 100%;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Style select */
@@ -80,8 +91,7 @@ h2 {
 select {
   font-size: 1rem;
   padding: 1em 3em 1em 1.5em;
-  color: white;
-  background-color: #4d5061;
+  background-color: #f1f1f1;
   border: 0;
   width: 300px;
 }
@@ -94,13 +104,13 @@ select {
 .custom-icon {
   position: absolute;
   display: block;
-  background-color: #3b3c47;
+  background-color: #ddd;
   height: 100%;
   width: 3rem;
   top: 0;
   right: 0;
   pointer-events: none;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(125, 125, 125, 0.5);
   font-size: large;
 }
 
@@ -120,8 +130,8 @@ select {
 }
 
 .container button:hover {
-  background-color: #04AA6D; /* Green */
   color: white;
+  opacity: 0.5;
 }
 
 /* SESSION */ 
@@ -130,6 +140,7 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin:20px;
 }
 
 /* black and white switch */
@@ -204,15 +215,16 @@ input:checked + .slider:before {
 
 /* images */ 
 
-.img-container {
-  margin-top: 20px;
-  border: solid;
-  padding: 50px;
+#img-container {
+  display: flex;
+  flex-direction: column;
   width: 80%;
+  height: 80%;
 }
 
-.img-container img {
-  align-items: stretch;
+#reference {
+  object-fit: fill;
+  max-height: 1000px;
 }
 
 /* buttons */ 
@@ -220,24 +232,41 @@ input:checked + .slider:before {
 .session-commands {
   display: flex;
   flex-direction: row;
-  align-items:flex-end;
+  align-items:center;
   justify-content:space-between;
   font-size: 30px;
-  width: 100%;
+  width: 80%;
+  margin: 20px;
 }
 
 .player-btns {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .player-btns i:hover {
-  color: rgb(116, 116, 116);
+  opacity: 0.5;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
-  cursor: pointer
+  cursor: pointer;
+}
+
+.blackandwhite {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#credits {
+  text-align: center;
+  opacity: 0.5;
+}
+
+a {
+  color: black;
+  cursor: pointer;
 }
 
 

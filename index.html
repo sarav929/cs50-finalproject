@@ -4,279 +4,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../cs50-finalproject/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://kit.fontawesome.com/6aff11957b.js" crossorigin="anonymous"></script>
     <script src="../cs50-finalproject/app.js" defer></script>
     <title>Sketch it</title>
 </head>
 <body>
 
-    <h2>Sketch it</h2>
-<span id="sub">What do you want to practice today?</span>
+<div id="logo"><img src="../cs50-finalproject/img/sketchit_logo.png"></div>
 
+<div class="wrapper">
+  <div class="tab">
+    <button class="tablinks active" onclick="openSubj(event, 'people')">People</button>
+    <button class="tablinks" onclick="openSubj(event, 'body-parts')">Body parts</button>
+    <button class="tablinks" onclick="openSubj(event, 'animals')">Animals</button>
+    <button class="tablinks" onclick="openSubj(event, 'nature')">Nature</button>
+    <button class="tablinks" onclick="openSubj(event, 'buildings')">Buildings</button>
+    <button class="tablinks" onclick="openSubj(event, 'others')">Others</button>
+  </div>
+  <div id="people" class="tabcontent w3-container city w3-animate-opacity" style="display:block">
+    <form class="container" method="post" action="../cs50-finalproject/session.html">
+      <p><span id="sub">What do you want to practice today?</span>
+        <div class="custom-select">
+          <select name="people" id="peopleSelect" required>
+              <option disabled selected value> People </option>
+              <option value="model">All</option>
+              <option value="portrait photography">Portrait</option>
+              <option value="portrait photography female">Female Portrait</option>
+              <option value="portrait photography male">Male Portrait</option>
+              <option value="face expression">Face Expressions</option> 
+              <option value="pose">Poses</option>        
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
 
-<div class="tab">
-  <button class="tablinks" onclick="openSubj(event, 'people')">People</button>
-  <button class="tablinks" onclick="openSubj(event, 'body-parts')">Body parts</button>
-  <button class="tablinks" onclick="openSubj(event, 'animals')">Animals</button>
-  <button class="tablinks" onclick="openSubj(event, 'nature')">Nature</button>
-  <button class="tablinks" onclick="openSubj(event, 'buildings')">Buildings</button>
-  <button class="tablinks" onclick="openSubj(event, 'others')">Others</button>
+      <p><span id="sub">Reference photo timer:</span>
+        <div class="custom-select">
+          <select name="timer" id="timerPeople">
+            <option value="no-timer">No timer</option>
+            <option value="1">1 minute</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="25">25 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">60 minutes</option>        
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><button class="submit">START</button></p>
+    </form>
+  </div>
+
+  <div id="body-parts" class="tabcontent w3-container city w3-animate-opacity">
+
+    <form class="container" method="post" action="../cs50-finalproject/session.html">
+      <p><span id="sub">What do you want to practice today?</span>
+        <div class="custom-select">
+          <select name="body-parts" id="body-partsSelect" required>
+              <option disabled selected value> Body parts </option>
+              <option value="human eyes">Eyes</option>
+              <option value="human mouth">Mouth</option>
+              <option value="human nose">Nose</option>
+              <option value="human hands">Hands</option>
+              <option value="human feet">Feet</option>
+              <option value="human ears">Ears</option>              
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><span id="sub">Reference photo timer:</span>
+        <div class="custom-select">
+          <select name="timer" id="timerBody">
+            <option value="no-timer">No timer</option>
+            <option value="1">1 minute</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="25">25 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">60 minutes</option>       
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><button class="submit">START</button></p>
+    </form>
+
+  </div>
+
+  <div id="animals" class="tabcontent w3-container city w3-animate-opacity">
+    <form class="container" method="post" action="../cs50-finalproject/session.html">
+      <p><span id="sub">What do you want to practice today?</span>
+        <div class="custom-select">
+          <select name="animals" id="animalsSelect" required>
+            <option disabled selected value>Animals</option>
+            <option value="animals">All</option>
+            <option value="mammals">Mammals</option>
+            <option value="birds">Birds</option>
+            <option value="fish">Fish</option>
+            <option value="reptiles">Reptiles</option>
+            <option value="amphibians">Amphibians</option>
+            <option value="insects">Insects</option>            
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><span id="sub">Reference photo timer:</span>
+        <div class="custom-select">
+          <select name="timer" id="timerAnimals">
+            <option value="no-timer">No timer</option>
+            <option value="1">1 minute</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="25">25 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">60 minutes</option>       
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><button class="submit">START</button></p>
+    </form>     
+  </div>
+
+  <div id="buildings" class="tabcontent w3-container city w3-animate-opacity">
+
+    <form class="container" method="post" action="../cs50-finalproject/session.html">
+      <p><span id="sub">What do you want to practice today?</span>
+        <div class="custom-select">
+          <select name="buildings" id="buildingsSelect" required>
+            <option disabled selected value>Buildings</option>
+              <option value="house">Houses</option>
+              <option value="architecture">Architecture</option>
+              <option value="sculpture">Sculptures</option>
+              <option value="street photography">Streets</option>            
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><span id="sub">Reference photo timer:</span>
+        <div class="custom-select">
+          <select name="timer" id="timerBuildings">
+            <option value="no-timer">No timer</option>
+            <option value="1">1 minute</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="25">25 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">60 minutes</option>       
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><button class="submit">START</button></p>
+    </form> 
+  </div>
+
+  <div id="nature" class="tabcontent w3-container city w3-animate-opacity">
+
+    <form class="container" method="post" action="../cs50-finalproject/session.html">
+      <p><span id="sub">What do you want to practice today?</span>
+        <div class="custom-select">
+          <select name="nature" id="natureSelect" required>
+            <option disabled selected value>Nature</option>
+              <option value="nature">All</option>
+              <option value="landscape">Landscapes</option>
+              <option value="plant">Plants</option>
+              <option value="tree">Trees</option>
+              <option value="fruit">Fruits</option>
+              <option value="flower">Flowers</option>
+              <option value="sea">Sea</option>
+              <option value="mountain">Mountains</option>
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><span id="sub">Reference photo timer:</span>
+        <div class="custom-select">
+          <select name="timer" id="timerNature">
+            <option value="no-timer">No timer</option>
+            <option value="1">1 minute</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="25">25 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">60 minutes</option>       
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><button class="submit">START</button></p>
+    </form> 
+
+  </div>
+
+  <div id="others" class="tabcontent w3-container city w3-animate-opacity">
+    <form class="container" method="post" action="../cs50-finalproject/session.html">
+      <p><span id="sub">What do you want to practice today?</span>
+        <div class="custom-select">
+          <select name="others" id="othersSelect" required>
+              <option disabled selected value> Others </option>
+              <option value="still life">Still Life</option>
+              <option value="food">Food</option>       
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><span id="sub">Reference photo timer:</span>
+        <div class="custom-select">
+          <select name="timer" id="timerOthers">
+            <option value="no-timer">No timer</option>
+            <option value="1">1 minute</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="25">25 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">60 minutes</option>        
+          </select>
+          <span class="custom-icon">
+            <i class="fa-solid fa-chevron-down" id="icon"></i>
+          </span>
+        </div>
+      </p>
+
+      <p><button class="submit">START</button></p>
+    </form>
+  </div>
 </div>
-<div id="people" class="tabcontent">
-  <form class="container" method="post" action="../cs50-finalproject/session.html">
-    <p>
-      <div class="custom-select">
-        <select name="people" id="peopleSelect" required>
-            <option disabled selected value> People </option>
-            <option value="model">All</option>
-            <option value="portrait photography">Portrait</option>
-            <option value="portrait photography female">Female Portrait</option>
-            <option value="portrait photography male">Male Portrait</option>
-            <option value="face expression">Face Expressions</option> 
-            <option value="pose">Poses</option>        
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
 
-    <p>
-      <div class="custom-select">
-        <select name="timer" id="timerPeople">
-          <option value="no-timer">No timer</option>
-          <option value="1">1 minute</option>
-          <option value="5">5 minutes</option>
-          <option value="10">10 minutes</option>
-          <option value="15">15 minutes</option>
-          <option value="20">20 minutes</option>
-          <option value="25">25 minutes</option>
-          <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>        
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p><button class="submit">START</button></p>
-  </form>
-</div>
-
-<div id="body-parts" class="tabcontent">
-
-  <form class="container" method="post" action="../cs50-finalproject/session.html">
-    <p>
-      <div class="custom-select">
-        <select name="body-parts" id="body-partsSelect" required>
-            <option disabled selected value> Body parts </option>
-            <option value="human eyes">Eyes</option>
-            <option value="human mouth">Mouth</option>
-            <option value="human nose">Nose</option>
-            <option value="hands">Hands</option>
-            <option value="feet">Feet</option>
-            <option value="human ears">Ears</option>              
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p>
-      <div class="custom-select">
-        <select name="timer" id="timerBody">
-          <option value="no-timer">No timer</option>
-          <option value="1">1 minute</option>
-          <option value="5">5 minutes</option>
-          <option value="10">10 minutes</option>
-          <option value="15">15 minutes</option>
-          <option value="20">20 minutes</option>
-          <option value="25">25 minutes</option>
-          <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>       
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p><button class="submit">START</button></p>
-  </form>
-
-</div>
-
-<div id="animals" class="tabcontent">
-  <form class="container" method="post" action="../cs50-finalproject/session.html">
-    <p>
-      <div class="custom-select">
-        <select name="animals" id="animalsSelect" required>
-          <option disabled selected value>Animals</option>
-          <option value="animals">All</option>
-          <option value="mammals">Mammals</option>
-          <option value="birds">Birds</option>
-          <option value="fish">Fish</option>
-          <option value="reptiles">Reptiles</option>
-          <option value="amphibians">Amphibians</option>
-          <option value="insects">Insects</option>            
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p>
-      <div class="custom-select">
-        <select name="timer" id="timerAnimals">
-          <option value="no-timer">No timer</option>
-          <option value="1">1 minute</option>
-          <option value="5">5 minutes</option>
-          <option value="10">10 minutes</option>
-          <option value="15">15 minutes</option>
-          <option value="20">20 minutes</option>
-          <option value="25">25 minutes</option>
-          <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>       
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p><button class="submit">START</button></p>
-  </form>     
-</div>
-
-<div id="buildings" class="tabcontent">
-
-  <form class="container" method="post" action="../cs50-finalproject/session.html">
-    <p>
-      <div class="custom-select">
-        <select name="buildings" id="buildingsSelect" required>
-          <option disabled selected value>Buildings</option>
-            <option value="house">Houses</option>
-            <option value="architecture">Architecture</option>
-            <option value="sculpture">Sculptures</option>
-            <option value="street photography">Streets</option>            
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p>
-      <div class="custom-select">
-        <select name="timer" id="timerBuildings">
-          <option value="no-timer">No timer</option>
-          <option value="1">1 minute</option>
-          <option value="5">5 minutes</option>
-          <option value="10">10 minutes</option>
-          <option value="15">15 minutes</option>
-          <option value="20">20 minutes</option>
-          <option value="25">25 minutes</option>
-          <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>       
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p><button class="submit">START</button></p>
-  </form> 
-</div>
-
-<div id="nature" class="tabcontent">
-
-  <form class="container" method="post" action="../cs50-finalproject/session.html">
-    <p>
-      <div class="custom-select">
-        <select name="nature" id="natureSelect" required>
-          <option disabled selected value>Nature</option>
-            <option value="nature">All</option>
-            <option value="landscape">Landscapes</option>
-            <option value="plant">Plants</option>
-            <option value="tree">Trees</option>
-            <option value="fruit">Fruits</option>
-            <option value="flower">Flowers</option>
-            <option value="sea">Sea</option>
-            <option value="mountain">Mountains</option>
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p>
-      <div class="custom-select">
-        <select name="timer" id="timerNature">
-          <option value="no-timer">No timer</option>
-          <option value="1">1 minute</option>
-          <option value="5">5 minutes</option>
-          <option value="10">10 minutes</option>
-          <option value="15">15 minutes</option>
-          <option value="20">20 minutes</option>
-          <option value="25">25 minutes</option>
-          <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>       
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p><button class="submit">START</button></p>
-  </form> 
-
-</div>
-
-<div id="others" class="tabcontent">
-  <form class="container" method="post" action="../cs50-finalproject/session.html">
-    <p>
-      <div class="custom-select">
-        <select name="others" id="othersSelect" required>
-            <option disabled selected value> Others </option>
-            <option value="still life">Still Life</option>
-            <option value="food">Food</option>       
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p>
-      <div class="custom-select">
-        <select name="timer" id="timerOthers">
-          <option value="no-timer">No timer</option>
-          <option value="1">1 minute</option>
-          <option value="5">5 minutes</option>
-          <option value="10">10 minutes</option>
-          <option value="15">15 minutes</option>
-          <option value="20">20 minutes</option>
-          <option value="25">25 minutes</option>
-          <option value="30">30 minutes</option>
-          <option value="60">60 minutes</option>        
-        </select>
-        <span class="custom-icon">
-          <i class="fa-solid fa-chevron-down" id="icon"></i>
-        </span>
-      </div>
-    </p>
-
-    <p><button class="submit">START</button></p>
-  </form>
-</div>
-
-
+<footer class="footer">
+  <p>
+    Copyright © sarav929 | 
+    <a href="https://github.com/sarav929" target="_blank">
+      <i class="fab fa-github"></i
+    ></a>
+  </p>
+</footer>
 
 </body>
 </html>

@@ -1,11 +1,3 @@
-// test //
-let displayValues = function (a, b) {
-  console.log(a, b)
-}
-
-
-
-// tabs function //
 function openSubj(evt, subjName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -20,13 +12,9 @@ function openSubj(evt, subjName) {
   evt.currentTarget.className += " active";
 }
 
-
-
-// subj and timer var //
 let practiceSubj
 let timerImg = 'no-timer'
 
-// select elements //
 const people = document.getElementById("peopleSelect")
 const timerPeople = document.getElementById("timerPeople")
 const bodyparts = document.getElementById("body-partsSelect")
@@ -39,13 +27,11 @@ const nature = document.getElementById("natureSelect")
 const timerNature = document.getElementById("timerNature")
 const others = document.getElementById("othersSelect")
 const timerOthers = document.getElementById("timerOthers")
-// forms // 
 const forms = document.querySelectorAll('form.container')
 
-// function on submit //
+
 for (var i = 0, len = forms.length; i < len; i++) {
   forms[i].addEventListener('submit', () => {
-    displayValues(practiceSubj, timerImg)
     
     localStorage.setItem('practiceSubj', practiceSubj)
     localStorage.setItem('timerImg', timerImg)
