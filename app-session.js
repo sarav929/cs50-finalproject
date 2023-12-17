@@ -25,7 +25,7 @@ const bwSwitch = document.getElementById('bw-switch')
 
 back.addEventListener('click', (e) =>{
     localStorage.clear()
-    window.location = 'file:///home/sarav9/repos/cs50-finalproject/index.html'
+    window.location = 'https://sarav929.github.io/cs50-finalproject/'
 
 })
 
