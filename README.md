@@ -1,8 +1,9 @@
-SKETCH IT 
+# Sketch it 
+### CS50 final project
 
-Video Demo:  https://www.youtube.com/watch?v=mBxZV9pg-_0
+- [Live preview](https://sarav929.github.io/cs50-finalproject/)
 
-Description:
+- [Video Demo](https://www.youtube.com/watch?v=mBxZV9pg-_0)
 
 For my final project I decided to create a reference website for sketching or getting inspired to create art. The website is called "Sketch it" and it works with the Unsplash.com API to generate reference images according to user's input. 
 
