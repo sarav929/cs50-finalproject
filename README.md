@@ -1,6 +1,6 @@
 # Sketch it - CS50 Final Project
 
-- [Live preview](https://sarav929.github.io/sketch-it-cs50/)
+- [Live preview](https://sarav929.github.io/final-project-cs50/)
 
 - [Video Demo](https://www.youtube.com/watch?v=mBxZV9pg-_0)
 
